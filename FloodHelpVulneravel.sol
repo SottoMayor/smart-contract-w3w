@@ -12,20 +12,20 @@ pragma solidity ^0.8.19;
     F => Utilização de função depreciada
 */
 
-// Payload de entrada
-struct Request {
-    uint id;
-    address author; // Endereço da carteira do autor do pedido, para quem as moedas vão.
-    string title;
-    string description;
-    string contact;
-    uint timestamp;
-    uint goal;
-    uint balance;
-    bool open;
-}
-
 contract FloodHelp {
+    // Payload de entrada
+    struct Request {
+        uint id;
+        address author; // Endereço da carteira do autor do pedido, para quem as moedas vão.
+        string title;
+        string description;
+        string contact;
+        uint timestamp;
+        uint goal;
+        uint balance;
+        bool open;
+    }
+
     uint public lastId = 0;
     mapping (uint => Request) public requests;
 
